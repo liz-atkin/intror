@@ -46,3 +46,6 @@ artists %>%
 head()
 
 ```
+
+#select() takes a data frame as its first argument
+#all additional arguments are the desired columns to select
