@@ -1,0 +1,48 @@
+---
+title: "Introduction to R Syntax"
+output: html_notebook
+---
+```{r}
+
+message <- 'Should I pack an umbrella?'
+weather <- 'cloudy'
+high_chance_of_rain <- TRUE
+if(weather=='cloudy' & high_chance_of_rain){
+  message<-'Pack umbrella!'
+} else{
+message <- 'No need for umbrella!'
+}
+print(message)
+
+
+sort(c(2,4,10,5,1)); # Outputs c(1,2,4,5,10)
+length(c(2,4,10,5,1)); # Outputs 5
+sum(5,15,10) #Outputs 30
+
+data <- c(120,22,22,31,15,120)
+unique_vals<-unique(data)
+print(unique_vals)
+
+solution <- sqrt(49)
+print(solution)
+```
+
+CSV = comma separated values
+
+```{r message=FALSE, warning=FALSE}
+# load libraries
+library(readr)
+library(dplyr)
+```
+
+```{r message=FALSE}
+# load data frame
+artists <- read_csv('artists.csv')
+```
+
+```{r}
+# inspect data frame with pipe
+artists %>%
+head()
+
+```
